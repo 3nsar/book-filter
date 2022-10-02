@@ -3,3 +3,37 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.nav-container{
+  border: 1px solid red;
+  padding: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 95%;
+ 
+}
+.nav-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-content ul{
+  list-style: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-content li{
+  margin-left: 2rem;
+}
+
+.main-container input{
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 20px;
+  display: flex;
+  margin: 2rem auto 0 auto;
+  width: 300px;
+  height: 45px;
+}

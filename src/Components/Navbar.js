@@ -1,0 +1,18 @@
+import React from 'react'
+
+const Navbar = () => {
+  return (
+    <div className='nav-container'>
+      <div className="nav-content">
+          <h1>Bookpedia</h1>
+          <ul>
+            <li>Sort by</li>
+            <li>Genres</li>
+            <li>Watchlist</li>
+          </ul>
+      </div>
+    </div>
+  )
+}
+
+export default Navbar

@@ -1,8 +1,10 @@
-import Books from "./Books";
+import Books from "./Components/Books";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <Navbar />
       <Books />
     </div>
   );
