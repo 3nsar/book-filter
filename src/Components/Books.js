@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 
 const url = "https://example-data.draftbit.com/books?_limit=200";
@@ -39,7 +40,7 @@ useEffect(() =>{
       <div className="search">
        <div className='search-content'>
         <input type="text" placeholder='Search...' onChange={handleSearch}/>
-        <div className='search-icon'> <SearchIcon /></div>
+        <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon /> : <CloseIcon />}</div>
         {filteredData.length != 0 && (
           <div className='dataResult'> {filteredData.slice(0, 10).map((item)=>(
             <a href="dataItem"><p>{item.title}</p></a>
