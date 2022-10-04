@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
+import Searchbar from './Searchbar.css'
 
 const url = "https://example-data.draftbit.com/books?_limit=200";
 

@@ -1,15 +1,15 @@
 .nav-container{
-    
     padding: 1rem;
     max-width: 1300px;
     margin: 0 auto;
-   
+    background-color: #000;
   }
   .nav-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   
   .nav-content ul{
     list-style: none;

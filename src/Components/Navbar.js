@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='nav-container'>
       <div className="nav-content">
-          <h1>Bookpedia</h1>
+          <h1>BOOKHOUSE</h1>
           <ul>
             <li>Sort by</li>
             <li>Genres</li>
