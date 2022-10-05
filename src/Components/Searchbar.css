@@ -19,6 +19,7 @@
   .search-icon{
     display: flex;
     cursor: pointer;
+    font-size: 40px;
 
   }
   .data-get{
