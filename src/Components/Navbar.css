@@ -2,7 +2,7 @@
     padding: 1rem;
     max-width: 1300px;
     margin: 0 auto;
-    background-color: #000;
+    background-color: rgb(53, 4, 187);
   }
   .nav-content{
     display: flex;
