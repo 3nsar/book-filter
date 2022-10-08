@@ -20,5 +20,6 @@
   
   .nav-content li{
     margin-left: 2rem;
+    cursor: pointer;
   }
-  /*Grid*/
+ 

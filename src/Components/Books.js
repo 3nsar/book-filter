@@ -44,7 +44,8 @@ useEffect(() =>{
   }
 
   return (
-    <div className='main-container'>
+    <>
+    
       <div className="search">
        <div className='search-content'>
         <input type="text" placeholder='Search...' value={wordEntered} onChange={handleSearch}/>
@@ -59,6 +60,7 @@ useEffect(() =>{
           </div>
         )}
        </div>
+       <div className='main-container'>
       {book.filter((item)=>{
         return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
       }).map((item) =>(
@@ -72,6 +74,7 @@ useEffect(() =>{
       ))}
         
     </div>
+    </>
   )
 }
 
