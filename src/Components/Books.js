@@ -62,10 +62,12 @@ useEffect(() =>{
       {book.filter((item)=>{
         return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
       }).map((item) =>(
+        <div className='card-grid'>
         <div key={item.id} className="card">
         <img src={item.image_url} alt="pic" />
         <p>{item.title}</p>
         <p>{item.authors}</p>
+        </div>
         </div>
       ))}
         
