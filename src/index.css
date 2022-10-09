@@ -19,7 +19,7 @@ body{
 }
 
 .card{
-  border: 2px solid red;
+  border: 3px solid rgb(24, 43, 181);
 }
 
 .card img{
@@ -28,5 +28,5 @@ body{
 
 .main-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
