@@ -8,6 +8,7 @@
   .search input{
     width: 300px;
     height: 40px;
+    
   }
   
   .search-content{
@@ -20,6 +21,7 @@
     display: flex;
     cursor: pointer;
     font-size: 40px;
+    background-color: rgb(216, 216, 216);
 
   }
   .data-get{
