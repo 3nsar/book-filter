@@ -26,8 +26,12 @@ body{
   flex-direction: column;
 }
 
+.card-rating{
+  display: flex;
+}
+
 .card img{
-  height: 200px;
+  height: 150px;
 }
 
 .main-container {
