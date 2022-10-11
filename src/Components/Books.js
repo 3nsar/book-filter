@@ -71,8 +71,8 @@ useEffect(() =>{
         <div className='card-grid'>
         <div key={item.id} className="card">
         <img src={item.image_url} alt="pic" />
-        <p>{item.title}</p>
-        <p>{item.authors}</p>
+        <p className='card-title'>{item.title.slice(0, 40) + (item.title.length > 40 ? "..." : "")}</p>
+        <p className='card-authors'>{item.authors}</p>
         <div className='card-rating'>
         <p>{item.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
                     : item.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
