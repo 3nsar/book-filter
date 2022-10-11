@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
+import StarIcon from '@mui/icons-material/Star';
 import Searchbar from './Searchbar.css'
 
 const url = "https://example-data.draftbit.com/books?_limit=200";
@@ -69,8 +70,10 @@ useEffect(() =>{
         <img src={item.image_url} alt="pic" />
         <p>{item.title}</p>
         <p>{item.authors}</p>
+        <div className='card-rating'>
         <p>({item.rating})</p>
-        <p>{item.rating >= 4 ? "ZZZZZ" : "zzzz" }</p>
+        <p>{item.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/></> : <><StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </>}</p>
+        </div>
         <button>Read More</button>
         </div>
         </div>
