@@ -1,5 +1,5 @@
 .card{
-    border: 1px solid rgb(24, 43, 181);
+    border: 1px solid rgb(24, 43, 181); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,19 +8,46 @@
   
   .card-rating{
     display: flex;
+    align-items: center;
   }
-  
+ 
   .card img{
     height: 150px;
+    margin-top: .5rem;
   }
   
   .main-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .card button{
+    padding: .5rem;
+    background-color: rgb(255, 19, 110);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    cursor: pointer;
   }
 
+  .card-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .btn-heart{
+    cursor: pointer;
+  }
+
+  .btn-heart-full{
+    color: red;
+  }
+  
   .card-authors{
-    margin-top: 20px;
+    
   }
 
   .card-title{

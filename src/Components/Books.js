@@ -5,6 +5,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
+import Checkbox from '@mui/material/Checkbox';
+
+
 import Card from './Card.css'
 import Searchbar from './Searchbar.css'
 
@@ -15,6 +20,7 @@ const [search, setSearch] = useState("")
 const [book, setBook] = useState([])
 const [filteredData, setFilteredData] = useState([])
 const [wordEntered, setWordEntered] = useState("")
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 useEffect(() =>{ 
     axios.get(url).then((response) => {
@@ -71,7 +77,7 @@ useEffect(() =>{
         <div className='card-grid'>
         <div key={item.id} className="card">
         <img src={item.image_url} alt="pic" />
-        <p className='card-title'>{item.title.slice(0, 40) + (item.title.length > 40 ? "..." : "")}</p>
+        <p className='card-title'>{item.title.slice(0, 30) + (item.title.length > 30 ? "..." : "")}</p>
         <p className='card-authors'>{item.authors}</p>
         <div className='card-rating'>
         <p>{item.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
@@ -83,7 +89,12 @@ useEffect(() =>{
                     : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>} </p>
         <p>({item.rating})</p>
         </div>
-        <button>Read More</button>
+         <div className='card-btns'>
+          <button>Read More</button>
+           <div>
+            <Checkbox {...label} icon={<FavoriteBorderIcon color="success"/>} checkedIcon={<Favorite color="success"/>} />
+           </div>
+         </div>
         </div>
         </div>
       ))}
