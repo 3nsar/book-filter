@@ -8,6 +8,11 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import Checkbox from '@mui/material/Checkbox';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import SnackBar from './SnackBar.js'
+
+
 
 
 import Card from './Card.css'
@@ -21,6 +26,20 @@ const [book, setBook] = useState([])
 const [filteredData, setFilteredData] = useState([])
 const [wordEntered, setWordEntered] = useState("")
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
 
 useEffect(() =>{ 
     axios.get(url).then((response) => {
@@ -52,6 +71,7 @@ useEffect(() =>{
     setFilteredData([])
     setWordEntered("");
   }
+
 
   return (
     <>
@@ -92,7 +112,14 @@ useEffect(() =>{
          <div className='card-btns'>
           <button>Read More</button>
            <div>
-            <Checkbox {...label} icon={<FavoriteBorderIcon color="success"/>} checkedIcon={<Favorite color="success"/>} />
+            <Checkbox {...label} icon={<FavoriteBorderIcon color="success"/>} checkedIcon={<Favorite color="success" />} variant="contained"
+            onClick={handleClick}/>
+            <SnackBar 
+                open={open}
+                onClose={handleClose}
+                severity="success"
+                message="Book added to watchlist"
+            />
            </div>
          </div>
         </div>
