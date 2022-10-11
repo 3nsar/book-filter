@@ -69,6 +69,9 @@ useEffect(() =>{
         <img src={item.image_url} alt="pic" />
         <p>{item.title}</p>
         <p>{item.authors}</p>
+        <p>({item.rating})</p>
+        <p>{item.rating >= 4 ? "ZZZZZ" : "zzzz" }</p>
+        <button>Read More</button>
         </div>
         </div>
       ))}
