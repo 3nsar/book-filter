@@ -18,23 +18,3 @@ body{
 
 }
 
-.card{
-  border: 3px solid rgb(24, 43, 181);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.card-rating{
-  display: flex;
-}
-
-.card img{
-  height: 150px;
-}
-
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
