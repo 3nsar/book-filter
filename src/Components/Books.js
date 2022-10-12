@@ -100,7 +100,7 @@ useEffect(() =>{
          <div className='card-btns'>
           <button>Read More</button>
            <div>
-            <Checkbox onClick={notify}{...label} icon={<FavoriteBorderIcon color="success" />} checkedIcon={<Favorite color="success" />} variant="contained"/>
+            <Checkbox onClick={notify}{...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
             <ToastContainer />
            </div>
          </div>
