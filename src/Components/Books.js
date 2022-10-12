@@ -100,7 +100,7 @@ useEffect(() =>{
         </div>
          <div className='card-btns'>
           {/** <button>Read More</button> */}
-          <Link to={`/book/${item.id}`}> More info</Link>
+          <Link to={`/book/${item.id}`}>More info</Link>
            <div>
             <Checkbox onClick={notify} {...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
             <ToastContainer />
