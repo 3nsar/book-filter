@@ -4,7 +4,9 @@ import { useParams, Link } from 'react-router-dom'
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import singleBook from './SingleBook.css'
+
 
 
 const SingleBook = () => {
@@ -38,11 +40,11 @@ if(singleBook){
             <div className="book-desc">
             <p>{singleBook.description}</p>
             </div>
-            <h2>Details</h2>
+            <h2 className='detail-content'>Details</h2>
             <div className="book-details">
-            <p>Edition: {singleBook.edition}</p>
-            <p>Genres: {singleBook.genres}</p>
-            <p>Pages: {singleBook.num_pages}</p>
+            <p><strong>Edition:</strong> {singleBook.edition}</p>
+            <p><strong>Genres:</strong> {singleBook.genres}</p>
+            <p><strong>Pages: </strong> {singleBook.num_pages}</p>
             
             
 
@@ -56,10 +58,11 @@ if(singleBook){
                     : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>} </p>
             <p>({singleBook.rating})</p>
             </div>
-
-            <button>Add to watchlist</button>
-            <Link to={`/`}>go back</Link>
             </div>
+              <div className='book-btns'>
+                <button>Add to watchlist</button>
+                <Link to={`/`} className="gb-btn">Go Back</Link>
+              </div>
             </div>
         </div>
     )

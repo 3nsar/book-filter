@@ -7,7 +7,20 @@
 }
 
 .book-desc p{
-    margin: 0 2rem;
+    margin: 0 1rem;
+}
+
+.book-container h2{
+    text-decoration-line: underline;
+    text-decoration-color:rgb(255, 19, 110);
+}
+.book-container h1{
+    text-decoration-line: underline;
+    text-decoration-color:rgb(255, 19, 110);
+}
+
+.book-facts .detail-content{
+    margin-top: 2rem;
 }
 
 .book-desc{
@@ -19,11 +32,11 @@
 .book-details{
     border-radius: 20px;
     background-color: #03003c;
-    width: 98%;
+    width: 50%;
 }
 
 .book-details p{
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 
 .book-pic{
@@ -50,3 +63,28 @@
 .book-facts{
     margin-left: 2rem;
 }
+
+button{
+    padding: .5rem;
+    background-color: rgb(255, 19, 110);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-btns{
+    margin-top: 2rem;
+}
+
+.gb-btn{
+    text-decoration: none;
+    padding: .2rem 	0.625rem;
+    background-color: rgb(0, 218, 218);
+    border-radius: 5px;
+    color: var(--white);
+    margin-left: 2rem;
+}
+
+
+
