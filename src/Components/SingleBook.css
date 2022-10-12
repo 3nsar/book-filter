@@ -2,6 +2,30 @@
     display: flex;
 }
 
+.book-pic img{
+    height: 300px;
+}
+
+.book-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
 .book-rating{
     display: flex;
+}
+
+
+
+.book-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.book-facts{
+    margin-left: 2rem;
 }

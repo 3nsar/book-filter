@@ -25,19 +25,27 @@ useEffect(() =>{
 if(singleBook){
     return(
         <div className='book-container'>
-            <div>
-            <h1>{singleBook.title}</h1>
-            <h2>{singleBook.authors}</h2>
+            <div className='book-pic'>
             <img src={singleBook.image_url} alt="pic" />
             </div>
            
-            <div className='book-desc'>
+            <div className='book-facts'>
+                <div className="book-title">
+                   <h1>{singleBook.title}</h1>
+                    <h3>by {singleBook.authors}</h3>
+                </div>
+            <h2>Description</h2>
+            <div className="book-desc">
             <p>{singleBook.description}</p>
-            
-
+            </div>
+            <h2>Details</h2>
+            <div className="book-details">
             <p>Edition: {singleBook.edition}</p>
             <p>Genres: {singleBook.genres}</p>
             <p>Pages: {singleBook.num_pages}</p>
+            
+            
+
             <div className='book-rating'>
             <p>{singleBook.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
                     : singleBook.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
@@ -48,10 +56,11 @@ if(singleBook){
                     : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>} </p>
             <p>({singleBook.rating})</p>
             </div>
+
             <button>Add to watchlist</button>
             <Link to={`/`}>go back</Link>
             </div>
-            
+            </div>
         </div>
     )
 }
