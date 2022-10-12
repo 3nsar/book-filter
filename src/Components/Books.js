@@ -98,7 +98,7 @@ useEffect(() =>{
         <p>({item.rating})</p>
         </div>
          <div className='card-btns'>
-          <button>Read More</button>
+          <button>Read More</button> 
            <div>
             <Checkbox onClick={notify}{...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
             <ToastContainer />
