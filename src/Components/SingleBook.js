@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import singleBook from './SingleBook.css'
 
 
 const SingleBook = () => {
@@ -23,18 +24,21 @@ useEffect(() =>{
 
 if(singleBook){
     return(
-        <div>
+        <div className='book-container'>
+            <div>
             <h1>{singleBook.title}</h1>
             <h2>{singleBook.authors}</h2>
             <img src={singleBook.image_url} alt="pic" />
+            </div>
            
             <div className='book-desc'>
             <p>{singleBook.description}</p>
-            </div>
+            
 
             <p>Edition: {singleBook.edition}</p>
             <p>Genres: {singleBook.genres}</p>
             <p>Pages: {singleBook.num_pages}</p>
+            <div className='book-rating'>
             <p>{singleBook.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
                     : singleBook.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
                     : singleBook.rating >= 3.9 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarBorderIcon /> </> 
@@ -43,7 +47,11 @@ if(singleBook){
                     : singleBook.rating >= 3.55 ? <> <StarIcon/> <StarIcon/> <StarHalfIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
                     : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>} </p>
             <p>({singleBook.rating})</p>
+            </div>
+            <button>Add to watchlist</button>
             <Link to={`/`}>go back</Link>
+            </div>
+            
         </div>
     )
 }
