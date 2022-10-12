@@ -10,6 +10,7 @@ import Favorite from '@mui/icons-material/Favorite';
 import Checkbox from '@mui/material/Checkbox';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom'
 
 
 
@@ -98,9 +99,10 @@ useEffect(() =>{
         <p>({item.rating})</p>
         </div>
          <div className='card-btns'>
-          <button>Read More</button> 
+          {/** <button>Read More</button> */}
+          <Link to={`/book/${item.id}`}> More info</Link>
            <div>
-            <Checkbox onClick={notify}{...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
+            <Checkbox onClick={notify} {...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
             <ToastContainer />
            </div>
          </div>
