@@ -8,10 +8,8 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import Checkbox from '@mui/material/Checkbox';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
-import SnackBar from './SnackBar.js'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -27,18 +25,6 @@ const [filteredData, setFilteredData] = useState([])
 const [wordEntered, setWordEntered] = useState("")
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setOpen(false);
-  };
 
 
 useEffect(() =>{ 
@@ -71,6 +57,8 @@ useEffect(() =>{
     setFilteredData([])
     setWordEntered("");
   }
+
+  const notify = () => toast.info("Updated list",{position: "bottom-left", autoClose: 2000})
 
 
   return (
@@ -112,14 +100,8 @@ useEffect(() =>{
          <div className='card-btns'>
           <button>Read More</button>
            <div>
-            <Checkbox {...label} icon={<FavoriteBorderIcon color="success"/>} checkedIcon={<Favorite color="success" />} variant="contained"
-            onClick={handleClick}/>
-            <SnackBar 
-                open={open}
-                onClose={handleClose}
-                severity="success"
-                message="Book added to watchlist"
-            />
+            <Checkbox onClick={notify}{...label} icon={<FavoriteBorderIcon color="success" />} checkedIcon={<Favorite color="success" />} variant="contained"/>
+            <ToastContainer />
            </div>
          </div>
         </div>
