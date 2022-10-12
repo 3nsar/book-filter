@@ -61,7 +61,7 @@ if(singleBook){
             </div>
               <div className='book-btns'>
                 <button>Add to watchlist</button>
-                <Link to={`/`} className="gb-btn">Go Back</Link>
+                <Link to={`/`} className="gb-btn">Go back</Link>
               </div>
             </div>
         </div>

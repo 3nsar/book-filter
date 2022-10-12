@@ -8,6 +8,8 @@
   }
   .card:hover{
     cursor: pointer;
+    transform: scale(1.05);
+    z-index: 2;
   }
   .card-rating{
     display: flex;
@@ -40,6 +42,8 @@
     justify-content: center;
     
   }
+
+  
   
   .card-authors{
     
