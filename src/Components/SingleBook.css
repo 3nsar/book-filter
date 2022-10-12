@@ -6,20 +6,41 @@
     height: 300px;
 }
 
+.book-desc p{
+    margin: 0 2rem;
+}
+
+.book-desc{
+    border-radius: 20px;
+    background-color: #03003c;
+    width: 98%;
+}
+
+.book-details{
+    border-radius: 20px;
+    background-color: #03003c;
+    width: 98%;
+}
+
+.book-details p{
+    margin: 0 2rem;
+}
+
 .book-pic{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 2rem;
+    margin-top: 6rem;
+    height: 300px;
 }
 
 .book-rating{
     display: flex;
 }
 
-
-
 .book-title{
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

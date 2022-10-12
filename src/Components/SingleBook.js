@@ -28,7 +28,7 @@ if(singleBook){
             <div className='book-pic'>
             <img src={singleBook.image_url} alt="pic" />
             </div>
-           
+        
             <div className='book-facts'>
                 <div className="book-title">
                    <h1>{singleBook.title}</h1>
