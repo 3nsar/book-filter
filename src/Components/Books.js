@@ -99,7 +99,7 @@ useEffect(() =>{
               </select>
             
         </div>
-      </div>  
+       
       <div className='data-get'>
         {filteredData.length != 0 && (
           <div className='dataResult'> {filteredData.slice(0, 10).map((item)=>(
@@ -108,6 +108,7 @@ useEffect(() =>{
           </div>
         )}
        </div>
+       </div> 
        <div className='main-container'>
       {book.filter((item)=>{
         return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
