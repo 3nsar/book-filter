@@ -114,7 +114,7 @@ useEffect(() =>{
         return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
       }).map((item) =>(
         <div className='card-grid'>
-        <div key={item.id} className="card">
+        <Link className="rdm-btn" to={`/book/${item.id}`}><div key={item.id} className="card">
         <img src={item.image_url} alt="pic" />
         <p className='card-title'>{item.title.slice(0, 30) + (item.title.length > 30 ? "..." : "")}</p>
         <p className='card-authors'>{item.authors}</p>
@@ -132,11 +132,11 @@ useEffect(() =>{
           {/** <button>Read More</button> */}
           <Link className="rdm-btn" to={`/book/${item.id}`}> <button>Read more</button></Link>
            <div>
-            <Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> 
+            {/*<Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> */}
            </div>
            <ToastContainer />
          </div>
-        </div>
+        </div> </Link>
         </div>
       ))}
         

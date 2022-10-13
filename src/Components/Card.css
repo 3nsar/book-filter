@@ -7,7 +7,7 @@
     border-radius: 15px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, .3);
     background-color: var(--white);
-
+    color: var(--black);
   }
   .card:hover{
     cursor: pointer;
@@ -15,6 +15,11 @@
     z-index: 1;
     transition: all 0.4s ease;
   }
+
+  a{
+    text-decoration: none;
+  }
+  
   .card-rating{
     display: flex;
     align-items: center;
@@ -49,6 +54,7 @@
 
   .main-container{
     margin: 0 1rem;
+    margin-top: 5rem;
   }
   
   .card-authors{

@@ -7,6 +7,9 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import singleBook from './SingleBook.css'
 import { ToastContainer, toast } from 'react-toastify';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
+import Checkbox from '@mui/material/Checkbox';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -64,7 +67,8 @@ if(singleBook){
             </div>
             </div>
               <div className='book-btns'>
-                <button onClick={notify}>Add to watchlist</button>
+                <button onClick={notify}>Add to watchlist</button> 
+                {/*<Checkbox  onClick={notify}  icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> */}
                 <Link to={`/`} className="gb-btn">Go back</Link>
               </div>
               <ToastContainer />
