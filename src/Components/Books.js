@@ -59,6 +59,28 @@ useEffect(() =>{
     setWordEntered("");
   }
 
+  const [order, setOrder] = useState("ASC")
+
+  const sortingAtoZ = (col) =>{
+      if(order === "ASC") {
+        const sorted = [...book].sort((a, b) =>
+        a[col].toLowerCase()> b[col].toLowerCase() ? 1 : -1
+        );
+        setBook(sorted)
+        setOrder("DSC")
+      }
+  }
+
+  const sortingZtoA = (col) =>{
+    if(order === "DSC") {
+      const sorted = [...book].sort((a, b) =>
+      a[col].toLowerCase()< b[col].toLowerCase() ? 1 : -1
+      );
+      setBook(sorted)
+      setOrder("ASC")
+    }
+}
+
   const notify = () => toast.info("Updated list",{position: "bottom-left", autoClose: 2000})
 
 
@@ -69,6 +91,10 @@ useEffect(() =>{
        <div className='search-content'>
         <input type="text" placeholder='Search...' value={wordEntered} onChange={handleSearch}/>
         <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon className="search-icon"/> : <CloseIcon className='search-icon' onClick={clearInput}/>}</div>
+            <div>
+              <button onClick={() => sortingAtoZ("title")}>Sort A-Z</button>
+              <button onClick={() => sortingZtoA("title")}>Sort Z-A</button>
+             </div>
         </div>
       </div>  
       <div className='data-get'>
@@ -102,9 +128,9 @@ useEffect(() =>{
           {/** <button>Read More</button> */}
           <Link className="rdm-btn" to={`/book/${item.id}`}> <button>Read more</button></Link>
            <div>
-            <Checkbox onClick={notify} {...label} icon={<FavoriteBorderIcon color="error" />} checkedIcon={<Favorite color="error" />} variant="contained"/>
-            <ToastContainer />
+            <Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> 
            </div>
+           <ToastContainer />
          </div>
         </div>
         </div>
