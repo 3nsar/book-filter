@@ -59,7 +59,7 @@ useEffect(() =>{
     setWordEntered("");
   }
 
-  const [order, setOrder] = useState("ASC")
+  const [order, setOrder] = useState("DSC")
 
   const sortingAtoZ = (col) =>{
       if(order === "ASC") {
@@ -91,10 +91,12 @@ useEffect(() =>{
        <div className='search-content'>
         <input type="text" placeholder='Search...' value={wordEntered} onChange={handleSearch}/>
         <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon className="search-icon"/> : <CloseIcon className='search-icon' onClick={clearInput}/>}</div>
-            <div>
-              <button onClick={() => sortingAtoZ("title")}>Sort A-Z</button>
-              <button onClick={() => sortingZtoA("title")}>Sort Z-A</button>
-             </div>
+            
+              <select className='selector'>
+                <option onClick={() => sortingAtoZ("title")} value="az">Sort A-Z</option>
+                <option onClick={() => sortingZtoA("title")} value="za">Sort Z-A</option>
+              </select>
+            
         </div>
       </div>  
       <div className='data-get'>
