@@ -8,13 +8,14 @@
 }
 
 :root {
-  --white:#FFFFFF ;
+  --white:#FFFFFF;
+  --black: #020024;
 }
 
 body{
-  background-color: #020024; 
+  /*background-color: #020024; */
+  background-color: var(--white);
   font-family: 'Catamaran';
-  color: var(--white);
-
+  color: var(--black);
 }
 
