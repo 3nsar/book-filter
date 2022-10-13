@@ -59,15 +59,15 @@ useEffect(() =>{
     setWordEntered("");
   }
 
-  const [order, setOrder] = useState("DSC")
+  const [order, setOrder] = useState("ASC")
 
   const sortingAtoZ = (col) =>{
       if(order === "ASC") {
         const sorted = [...book].sort((a, b) =>
         a[col].toLowerCase()> b[col].toLowerCase() ? 1 : -1
         );
-        setBook(sorted)
         setOrder("DSC")
+        setBook(sorted)
       }
   }
 
@@ -76,8 +76,8 @@ useEffect(() =>{
       const sorted = [...book].sort((a, b) =>
       a[col].toLowerCase()< b[col].toLowerCase() ? 1 : -1
       );
-      setBook(sorted)
       setOrder("ASC")
+      setBook(sorted)
     }
 }
 
@@ -91,8 +91,9 @@ useEffect(() =>{
        <div className='search-content'>
         <input type="text" placeholder='Search...' value={wordEntered} onChange={handleSearch}/>
         <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon className="search-icon"/> : <CloseIcon className='search-icon' onClick={clearInput}/>}</div>
-            
+
               <select className='selector'>
+                <option disabled selected>Sort by</option>
                 <option onClick={() => sortingAtoZ("title")} value="az">Sort A-Z</option>
                 <option onClick={() => sortingZtoA("title")} value="za">Sort Z-A</option>
               </select>

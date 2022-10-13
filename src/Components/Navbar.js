@@ -7,8 +7,9 @@ const Navbar = () => {
       <div className="nav-content">
           <h1>BOOKHOUSE</h1>
           <ul>
-            <li>Sort by</li>
-            <li>Genres</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Books</li>
             <li>Watchlist</li>
           </ul>
       </div>
