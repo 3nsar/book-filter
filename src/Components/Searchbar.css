@@ -43,6 +43,10 @@
     box-shadow: none;
   }
 
+  .close-icon{
+    cursor: pointer;
+  }
+
   .data-get{
     /* border: 2px solid green; */
     display: flex;
@@ -58,7 +62,7 @@
     overflow: hidden;
     overflow-y: auto;
     /* border: 1px solid red; */
-    margin-right: 110px;
+    margin-right: 170px;
   }
   
   .dataResult{
