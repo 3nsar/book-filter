@@ -74,7 +74,7 @@ useEffect(() =>{
       <div className='data-get'>
         {filteredData.length != 0 && (
           <div className='dataResult'> {filteredData.slice(0, 10).map((item)=>(
-            <a href="dataItem"><p>{item.title}</p></a>
+            <a href="dataItem"><Link className="rdm-btn" to={`/book/${item.id}`}><p>{item.title}</p></Link></a>
           ))}
           </div>
         )}

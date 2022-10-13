@@ -6,6 +6,8 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import singleBook from './SingleBook.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -23,6 +25,8 @@ useEffect(() =>{
         console.log((response.data))
     })
 }, []); 
+
+const notify = () => toast.success("Added to list",{position: "bottom-left", autoClose: 2000})
 
 if(singleBook){
     return(
@@ -60,9 +64,10 @@ if(singleBook){
             </div>
             </div>
               <div className='book-btns'>
-                <button>Add to watchlist</button>
+                <button onClick={notify}>Add to watchlist</button>
                 <Link to={`/`} className="gb-btn">Go back</Link>
               </div>
+              <ToastContainer />
             </div>
         </div>
     )

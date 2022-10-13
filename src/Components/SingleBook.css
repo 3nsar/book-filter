@@ -4,6 +4,7 @@
 
 .book-pic img{
     height: 300px;
+    box-shadow: rgba(255, 19, 110, 0.4) -5px 5px, rgba(255, 19, 110, 0.3) -10px 10px, rgba(255, 19, 110, 0.2) -15px 15px, rgba(255, 19, 110, 0.1) -20px 20px, rgba(255, 19, 110, 0.05) -25px 25px;
 }
 
 .book-desc p{
@@ -25,13 +26,15 @@
 
 .book-desc{
     border-radius: 20px;
-    background-color: #03003c;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, .3);
     width: 98%;
 }
 
 .book-details{
     border-radius: 20px;
-    background-color: #03003c;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, .3);
     width: 50%;
 }
 
