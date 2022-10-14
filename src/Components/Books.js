@@ -90,7 +90,7 @@ useEffect(() =>{
       <div className="search">
        <div className='search-content'>
         <input type="text" placeholder='Search...' value={wordEntered} onChange={handleSearch}/>
-        <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon className="search-icon"/> : <CloseIcon className='search-icon close-icon' onClick={clearInput}/>}</div>
+        <div className='search-icon'> {filteredData.length === 0 ? <SearchIcon className="search-icon" fontSize='medium'/> : <CloseIcon className='search-icon close-icon' onClick={clearInput}/>}</div>
 
               <select className='selector'>
                 <option disabled selected>Sort by</option>
