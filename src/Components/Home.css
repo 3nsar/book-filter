@@ -1,38 +1,31 @@
+
 .home{
     width: 100%;
     height: 100vh;
-}
+} 
+
 
 .home video{
     width: 100%;
-    height: 100%; /*VIDEO HD VERSION*/
+    height: 100%; 
     object-fit: cover;
-    
-}
+} 
 
 .home-content {
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 100%; 
+    top: 85px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--white);
+  
 }
 
 .home-content h1{
     font-size: 3rem;
-}
-.home-content button{
-    font-size: 1.2rem;
-    padding: 1rem;
-    background-color: rgb(255, 19, 110);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .home-btn{
@@ -50,6 +43,6 @@
     margin-top: 0px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     background-color: rgba(0,0,0,.5);
-}
+} 
