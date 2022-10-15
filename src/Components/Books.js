@@ -12,8 +12,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
 
-
-
 import Card from './Card.css'
 import Searchbar from './Searchbar.css'
 
@@ -25,6 +23,7 @@ const [book, setBook] = useState([])
 const [filteredData, setFilteredData] = useState([])
 const [wordEntered, setWordEntered] = useState("")
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
 
 
 
@@ -80,6 +79,7 @@ useEffect(() =>{
       setBook(sorted)
     }
 }
+
 
   const notify = () => toast.info("Updated list",{position: "bottom-left", autoClose: 2000})
 
