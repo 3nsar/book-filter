@@ -38,6 +38,11 @@
     font-weight: 800;
 }
 
+.home-btn:hover{
+    background-color: rgb(192, 192, 192);
+    transition: all .4s ease;
+}
+
 .overlay{
     position: absolute;
     margin-top: 0px;
