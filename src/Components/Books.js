@@ -11,6 +11,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
+import Product from './Product';
 
 import Card from './Card.css'
 import Searchbar from './Searchbar.css'
@@ -115,19 +116,19 @@ useEffect(() =>{
       }).map((item) =>(
         <div className='card-grid'>
         <Link className="rdm-btn" to={`/book/${item.id}`}><div key={item.id} className="card">
-        <img src={item.image_url} alt="pic" />
-        <p className='card-title'>{item.title.slice(0, 30) + (item.title.length > 30 ? "..." : "")}</p>
-        <p className='card-authors'>{item.authors}</p>
-        <div className='card-rating'>
-        <p>{item.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
-                    : item.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
-                    : item.rating >= 3.9 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarBorderIcon /> </> 
-                    : item.rating >= 3.8 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/>  <StarBorderIcon /></> 
-                    : item.rating >= 3.7 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
-                    : item.rating >= 3.55 ? <> <StarIcon/> <StarIcon/> <StarHalfIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
-                    : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>} </p>
-        <p>({item.rating})</p>
-        </div>
+            <Product 
+              image={item.image_url}
+              title={item.title}
+              authors={item.authors}
+              ratingStars={item.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
+              : item.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
+              : item.rating >= 3.9 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarBorderIcon /> </> 
+              : item.rating >= 3.8 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/>  <StarBorderIcon /></> 
+              : item.rating >= 3.7 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
+              : item.rating >= 3.55 ? <> <StarIcon/> <StarIcon/> <StarHalfIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
+              : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>}
+              rating={item.rating}
+            />
          <div className='card-btns'>
           {/** <button>Read More</button> */}
           <Link className="rdm-btn" to={`/book/${item.id}`}> <button>Read more</button></Link>
