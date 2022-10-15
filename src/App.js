@@ -9,8 +9,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-      <Route path="/home" element={<Home />}/> 
-      <Route path="/" element={<Books />}/> 
+      <Route path="/" element={<Home />}/> 
+      <Route path="/books" element={<Books />}/> 
       <Route path="/book/:id" element={<SingleBook />}/> 
       </Routes>
     </Router>

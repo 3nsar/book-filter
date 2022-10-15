@@ -69,7 +69,7 @@ if(singleBook){
               <div className='book-btns'>
                 <button onClick={notify}>Add to watchlist</button> 
                 {/*<Checkbox  onClick={notify}  icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> */}
-                <Link to={`/`} className="gb-btn">Go back</Link>
+                <Link to={`/books`} className="gb-btn">Go back</Link>
               </div>
               <ToastContainer />
             </div>
