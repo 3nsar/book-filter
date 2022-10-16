@@ -30,3 +30,9 @@
   color: var(--white);
   cursor: pointer;
  }
+
+ .nav-container a:hover{
+  color: rgb(0, 218, 218);
+  transition: all .4s ease;
+ }
+

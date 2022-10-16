@@ -118,7 +118,7 @@ useEffect(() =>{
         <Link className="rdm-btn" to={`/book/${item.id}`}><div key={item.id} className="card">
             <Product 
               image={item.image_url}
-              title={item.title}
+              title={item.title.slice(0, 30) + (item.title.length > 30 ? "..." : "")}
               authors={item.authors}
               ratingStars={item.rating >= 4.1 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> </> 
               : item.rating >= 4 ? <> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/> </> 
