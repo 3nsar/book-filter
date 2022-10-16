@@ -1,8 +1,11 @@
 import React from 'react'
+import booksImg from "./booksImg.svg"
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+        <img src={booksImg} alt="pic" />
+    </div>
   )
 }
 
