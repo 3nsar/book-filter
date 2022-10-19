@@ -1,12 +1,15 @@
-import React from 'react'
-import booksImg from "./booksImg.svg"
+
+{/* import booksImg from "./booksImg.svg"  */}
+
 
 const About = () => {
   return (
-    <div className='about-container'>
-        <div className="about-content">
-        <img src={booksImg} alt="pic" width="300px"/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur, sunt ut, fugit delectus saepe aliquam expedita commodi cum temporibus amet officia ill</p>
+    <div className="about-container">
+        <div className="about-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur similique expedita a adipisci quaerat facilis hic dicta? Ad a obcaecati deserunt, fugiat tempora, omnis sit, quasi pariatur enim ab quam.</p>
+        </div>
+        <div className="img-cont">
+        {/*<img src={booksImg} alt="pic" width="300px"/> */}
         </div>
     </div>
   )
