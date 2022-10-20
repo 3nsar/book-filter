@@ -6,7 +6,7 @@
     flex-direction: column;
     border-radius: 15px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, .3);
-    background-color: var(--white);
+    background-color: var(--white); 
     color: var(--black);
   }
   .card:hover{

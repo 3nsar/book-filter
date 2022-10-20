@@ -11,8 +11,8 @@ import Checkbox from '@mui/material/Checkbox';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
-import Product from './Product';
 
+import Product from './Product';
 import Card from './Card.css'
 import Searchbar from './Searchbar.css'
 
@@ -115,7 +115,7 @@ useEffect(() =>{
         return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search)
       }).map((item) =>(
         <div className='card-grid'>
-        <Link className="rdm-btn" to={`/book/${item.id}`}><div key={item.id} className="card">
+        <Link className="rdm-btn" to={`/book/${item.id}`}><div key={item.id} >
             <Product 
               image={item.image_url}
               title={item.title.slice(0, 30) + (item.title.length > 30 ? "..." : "")}
@@ -128,15 +128,16 @@ useEffect(() =>{
               : item.rating >= 3.55 ? <> <StarIcon/> <StarIcon/> <StarHalfIcon/> <StarBorderIcon /> <StarBorderIcon /></> 
               : <><StarIcon/>  <StarIcon/> <StarBorderIcon /> <StarBorderIcon /> <StarBorderIcon /></>}
               rating={item.rating}
+              read={item.id}
             />
-         <div className='card-btns'>
-          {/** <button>Read More</button> */}
+         {/* <div className='card-btns'>
+          {/** <button>Read More</button> 
           <Link className="rdm-btn" to={`/book/${item.id}`}> <button>Read more</button></Link>
            <div>
-            {/*<Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> */}
+            {/*<Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> 
            </div>
            <ToastContainer />
-         </div>
+         </div>*/}
         </div> </Link>
         </div>
       ))}
