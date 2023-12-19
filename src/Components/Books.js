@@ -130,14 +130,14 @@ useEffect(() =>{
               rating={item.rating}
               read={item.id}
             />
-         {/* <div className='card-btns'>
-          {/** <button>Read More</button> 
+          <div className='card-btns'>
+          {/** <button>Read More</button> */}
           <Link className="rdm-btn" to={`/book/${item.id}`}> <button>Read more</button></Link>
            <div>
-            {/*<Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> 
+            {/** <Checkbox  onClick={notify} {...label} icon={<FavoriteBorderIcon color="error"/>} checkedIcon={<Favorite color="error" />} variant="contained"/> */}
            </div>
            <ToastContainer />
-         </div>*/}
+         </div>
         </div> </Link>
         </div>
       ))}
